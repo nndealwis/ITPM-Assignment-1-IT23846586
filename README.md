@@ -50,25 +50,6 @@ py IT23846586.py --excel "test_automation/Assignment 1 - Test cases.xlsx" --url 
 py IT23846586.py --excel "test_automation/Assignment 1 - Test cases.xlsx" --url "https://www.pixelssuite.com/chat-translator" --wait-ms 5000 --type-delay-ms 80 --slow-mo-ms 200 --save-every 1
 ```
 
-### Command Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `--excel` | str | `Assignment 1 - Test cases.xlsx` | Path to Excel file with test cases |
-| `--output` | str | Same as `--excel` | Where to save results (if not specified, overwrites input) |
-| `--sheet` | str | ` Test cases` | Sheet name to use |
-| `--url` | str | `https://www.pixelssuite.com/chat-translator` | Frontend URL to test |
-| `--wait-ms` | int | 5000 | Wait time for results (milliseconds) |
-| `--type-delay-ms` | int | 30 | Delay between each keystroke (milliseconds) |
-| `--slow-mo-ms` | int | 0 | Slow down browser actions (milliseconds) |
-| `--save-every` | int | 0 | Save results after every N rows (0 = only at end) |
-| `--headless` | flag | False | Run browser in headless mode (no UI visible) |
-| `--keep-open` | flag | False | Keep browser open after tests (press CTRL+C to stop) |
-| `--timeout-ms` | int | 60000 | Maximum wait for page load/actions (milliseconds) |
-| `--retries` | int | 8 | Number of retries to wait for output |
-| `--retry-wait-ms` | int | 1000 | Wait time between retries (milliseconds) |
-
----
 
 ## Examples
 
