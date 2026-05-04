@@ -41,77 +41,41 @@ This downloads Chromium and other browser engines (one-time setup).
 ### Basic Command
 
 ```powershell
-py IT23846586.py --excel "test_automation/Assignment 1 - Test cases.xlsx" --url "https://www.pixelssuite.com/chat-translator"
+py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --url "https://www.pixelssuite.com/chat-translator"
 ```
 
 ### Full Command with Recommended Options
 
 ```powershell
-py IT23846586.py --excel "test_automation/Assignment 1 - Test cases.xlsx" --url "https://www.pixelssuite.com/chat-translator" --wait-ms 5000 --type-delay-ms 80 --slow-mo-ms 200 --save-every 1
+py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --url "https://www.pixelssuite.com/chat-translator" --wait-ms 5000 --type-delay-ms 80 --slow-mo-ms 200 --save-every 1
 ```
 
-### Command Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `--excel` | str | `Assignment 1 - Test cases.xlsx` | Path to Excel file with test cases |
-| `--output` | str | Same as `--excel` | Where to save results (if not specified, overwrites input) |
-| `--sheet` | str | ` Test cases` | Sheet name to use |
-| `--url` | str | `https://www.pixelssuite.com/chat-translator` | Frontend URL to test |
-| `--wait-ms` | int | 5000 | Wait time for results (milliseconds) |
-| `--type-delay-ms` | int | 30 | Delay between each keystroke (milliseconds) |
-| `--slow-mo-ms` | int | 0 | Slow down browser actions (milliseconds) |
-| `--save-every` | int | 0 | Save results after every N rows (0 = only at end) |
-| `--headless` | flag | False | Run browser in headless mode (no UI visible) |
-| `--keep-open` | flag | False | Keep browser open after tests (press CTRL+C to stop) |
-| `--timeout-ms` | int | 60000 | Maximum wait for page load/actions (milliseconds) |
-| `--retries` | int | 8 | Number of retries to wait for output |
-| `--retry-wait-ms` | int | 1000 | Wait time between retries (milliseconds) |
-
----
-
-## Examples
 
 ### Run and Save Results to a New File
 
 ```powershell
-py IT23846586.py --excel "test_automation/Assignment 1 - Test cases.xlsx" --output "results.xlsx" --wait-ms 5000
+py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --output "results.xlsx" --wait-ms 5000
 ```
 
 ### Run in Headless Mode (No Browser Visible)
 
 ```powershell
-py IT23846586.py --excel "test_automation/Assignment 1 - Test cases.xlsx" --headless
+py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --headless
 ```
 
 ### Run with Slower Typing for Visibility
 
 ```powershell
-py IT23846586.py --excel "test_automation/Assignment 1 - Test cases.xlsx" --type-delay-ms 150 --slow-mo-ms 500
+py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --type-delay-ms 150 --slow-mo-ms 500
 ```
 
 ### Run and Keep Browser Open for Inspection
 
 ```powershell
-py IT23846586.py --excel "test_automation/Assignment 1 - Test cases.xlsx" --keep-open
+py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --keep-open
 ```
 Then press **CTRL+C** in the terminal to stop and save.
-
----
-
-## Excel File Format
-
-Your Excel file should have columns like:
-
-| Singlish | Sinhala | Actual output | Status |
-|----------|---------|---------------|--------|
-| kohomadha saepa saniipa? | (expected output) | (auto-filled) | (auto-filled) |
-| ... | ... | ... | ... |
-
-**Column names** are flexible — the script auto-detects:
-- **Input columns**: "Singlish", "Input", "Singlish Input", "Test Input", etc.
-- **Expected columns**: "Sinhala", "Expected_Output", "Expected Output", etc.
-- **Status columns**: "Status", "Result", "Pass/Fail", etc.
 
 ---
 
@@ -146,16 +110,7 @@ After completion:
 
 Results are saved to the `--output` file (or the same `--excel` file if no output specified).
 
----
 
-## Tips
-
-1. **Save Incrementally**: Use `--save-every 1` to save after each row (safer for long runs).
-2. **Test Subset**: Create a small Excel with just 5 rows to verify setup before running all 200+.
-3. **Parallel Runs**: Split your Excel into chunks and run multiple scripts simultaneously for faster testing.
-4. **Inspect Results**: Open the output Excel file to review pass/fail status and actual outputs.
-
----
 
 ## Support
 
