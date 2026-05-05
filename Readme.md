@@ -48,11 +48,6 @@ This downloads Chromium and other browser engines (one-time setup).
 
 \## Running Tests
 
-\### Basic Command
-
-```powershell
-
-py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --url "https://www.pixelssuite.com/chat-translator"
 
 ```
 
