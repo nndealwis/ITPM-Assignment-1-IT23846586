@@ -1,18 +1,10 @@
 \# Test Automation - Singlish to Sinhala Translator
 
-
-
 Automated test runner for the Pixels Suite Chat Translator. This script uses Playwright to run UI tests, collect actual outputs, and compare them against expected results.
-
-
 
 \---
 
-
-
 \## Prerequisites
-
-
 
 \- \*\*Windows OS\*\* (or adjust commands for Linux/Mac)
 
@@ -20,23 +12,13 @@ Automated test runner for the Pixels Suite Chat Translator. This script uses Pla
 
 \- \*\*Excel file\*\* with test cases (columns: Input, Expected Output, etc.)
 
-
-
 \---
-
-
 
 \## Installation
 
-
-
 \### 1. Install Python Packages
 
-
-
 Run these commands from the project directory:
-
-
 
 ```powershell
 
@@ -52,11 +34,7 @@ py -m pip install playwright openpyxl
 
 ```
 
-
-
 \### 2. Install Playwright Browsers
-
-
 
 ```powershell
 
@@ -64,23 +42,13 @@ py -m playwright install
 
 ```
 
-
-
 This downloads Chromium and other browser engines (one-time setup).
-
-
 
 \---
 
-
-
 \## Running Tests
 
-
-
 \### Basic Command
-
-
 
 ```powershell
 
@@ -88,23 +56,15 @@ py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --url "http
 
 ```
 
-
-
 \### Full Command with Recommended Options
-
-
 
 ```powershell
 
-py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --url "https://www.pixelssuite.com/chat-translator" --wait-ms 5000 --type-delay-ms 80 --slow-mo-ms 200 --save-every 1
+py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --input-col "Input" --url "https://www.pixelssuite.com/chat-translator" --wait-ms 5000 --type-delay-ms 80 --slow-mo-ms 200 --save-every 1
 
 ```
 
-
-
 \### Command Options
-
-
 
 | Option | Type | Default | Description |
 
@@ -136,19 +96,11 @@ py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --url "http
 
 | `--retry-wait-ms` | int | 1000 | Wait time between retries (milliseconds) |
 
-
-
 \---
-
-
 
 \## Examples
 
-
-
 \### Run and Save Results to a New File
-
-
 
 ```powershell
 
@@ -156,11 +108,7 @@ py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --output "r
 
 ```
 
-
-
 \### Run in Headless Mode (No Browser Visible)
-
-
 
 ```powershell
 
@@ -168,11 +116,7 @@ py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --headless
 
 ```
 
-
-
 \### Run with Slower Typing for Visibility
-
-
 
 ```powershell
 
@@ -180,11 +124,7 @@ py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --type-dela
 
 ```
 
-
-
 \### Run and Keep Browser Open for Inspection
-
-
 
 ```powershell
 
@@ -194,53 +134,33 @@ py IT23846586.py --excel "IT23846586-Assignment 1 - Test cases.xlsx" --keep-open
 
 Then press \*\*CTRL+C\*\* in the terminal to stop and save.
 
-
-
 \---
 
-
-
 \## Troubleshooting
-
-
 
 \### Error: `ModuleNotFoundError: No module named 'playwright'`
 
 → Run: `py -m pip install playwright openpyxl`
 
-
-
 \### Error: `Permission denied` when saving
 
 → Close the Excel file in Excel before running the script.
-
-
 
 \### Error: `Could not find Chat UI locators`
 
 → Check that the URL is correct and the website is accessible.
 
-
-
 \### Browser crashes mid-test
 
 → Try increasing `--timeout-ms` and `--wait-ms` values.
-
-
 
 \### Tests run very slowly
 
 → This is normal with `--type-delay-ms 80`. Reduce to 30 for faster runs.
 
-
-
 \---
 
-
-
 \## Output
-
-
 
 After completion:
 
@@ -256,19 +176,9 @@ After completion:
 
 &#x20; - `UI Error` — if something went wrong during the test
 
-
-
 Results are saved to the `--output` file (or the same `--excel` file if no output specified).
 
-
-
-
-
-
-
 \## Support
-
-
 
 For issues or questions, check:
 
@@ -279,6 +189,3 @@ For issues or questions, check:
 \- Python and Playwright are properly installed
 
 \- Browser/internet connection is stable
-
-
-

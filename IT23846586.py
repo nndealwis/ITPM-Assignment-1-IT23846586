@@ -10,7 +10,7 @@ from openpyxl.cell.cell import MergedCell
 
 # Configuration
 ROOT_DIR = Path(__file__).resolve().parent.parent
-TESTS_DIR = ROOT_DIR / "test_automation"
+TESTS_DIR = ROOT_DIR / "ITPM-Assignment-1-IT23846586"
 
 DEFAULT_EXCEL_CANDIDATES = [
     str(TESTS_DIR / "Assignment 1 - Test cases.xlsx"),
